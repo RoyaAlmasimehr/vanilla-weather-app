@@ -1,9 +1,8 @@
 
-
 h1 {
   color: #878787;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -19,7 +18,7 @@ li {
   padding: 0;
   color: rgb(135, 135, 135);
   font-size: 16px;
-  font-weight:100;
+  font-weight:300;
   line-height: 19px;
 }
 
@@ -56,4 +55,9 @@ li {
     position: relative;
     font-size: 16px;
     top: -34px;
+}
+.sun{
+    position: absolute;
+    left: 30%;
+    top: 130px;
 }
