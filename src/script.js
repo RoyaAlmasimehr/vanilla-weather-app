@@ -38,9 +38,18 @@ function displayTemperature(response) {
   wind.innerHTML = `Wind:${Math.round(response.data.wind.speed)} km/h`;
 }
 
-let apiKey = "2672779dd04931dc0259289fbe9db665";
+function search(city) {
+  let apiKey = "2672779dd04931dc0259289fbe9db665";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-let city = "kermanshah";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handlesubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("New York");
 
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handlesubmit);
