@@ -74,5 +74,22 @@ h1 {
 .sun {
   position: absolute;
   left: 22%;
-  bottom: 20px;
+  bottom: 120px;
+}
+
+.weather-forecast{
+    margin-top:20px;
+    text-align: center;
+}
+.weather-forecast-date{
+    font-size: 16px;
+    color: #000;
+}
+
+.weather-forecast-temperatures{
+    font-size: 13px;
+}
+
+.weather-forecast-temperatures-min{
+    opacity: 0.5;
 }
