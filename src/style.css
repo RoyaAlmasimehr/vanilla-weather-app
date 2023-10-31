@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 h1 {
   color: #878787;
   font-size: 24px;
