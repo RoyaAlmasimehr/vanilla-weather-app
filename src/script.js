@@ -65,11 +65,37 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
- 
+
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
+function displayForecast() {
+  let days = ["Tue" , "wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+ <div class="weather-forecast-day" >
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <div class="weather-forecast-icon">🌧️</div>
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperatures-max"> 18° </span>
+                  <span class="weather-forecast-temperatures-min"> 12° </span>
+                </div>
+              </div>
+            </div>
+          </div>
+`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = forecastHtml;
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesubmit);
@@ -81,3 +107,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+displayForecast();
