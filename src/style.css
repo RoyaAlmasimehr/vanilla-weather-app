@@ -1,20 +1,39 @@
-h1 {
-  color: #878787;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 28px;
-  margin-bottom: 0;
-}
-
-ul {
+* {
   margin: 0;
   padding: 0;
+}
+.container {
+  position: relative;
+}
+
+h1 {
+  color: #878787;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  position: absolute;
+  top: 80px;
+  left: 30px;
+}
+.desc {
+  position: absolute;
+  right: 40px;
+  top: 130px;
+}
+.weather-time {
+  position: absolute;
+  left: 5px;
+  top: 130px;
+}
+.weather-temperature {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
 }
 
 li {
   list-style: none;
-  margin: 0;
-  padding: 0;
+
   color: rgb(135, 135, 135);
   font-size: 16px;
   font-weight: 300;
@@ -23,7 +42,7 @@ li {
 
 .weather-app-wrapper {
   max-width: 500px;
-
+  background-color: rgba(16, 118, 201, 0.155);
   margin: 30px auto;
 }
 
@@ -33,70 +52,26 @@ li {
   border-radius: 5px;
   position: relative;
 }
-.overwiew {
+.weather-app-temperature {
+  font-size: 45px;
 }
-
-.weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
-}
-
-.weather-temperature strong {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-}
-.weather-temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -34px;
-}
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-}
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-ul {
-  padding-left: 10px;
-}
-h1 {
-  padding-left: 10px;
-  margin-top: -40px;
-}
-
-.sun {
-  position: absolute;
-  left: 22%;
-  bottom: 120px;
-}
-
-.weather-forecast-day {
-  margin-top: 20px;
-  text-align: center;
+.weather-forecast {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
+  margin-top: 10px;
+  
+}
+.weather-forecast-day {
+  font-size: px;
 }
 .weather-forecast-date {
-  font-size: 16px;
-  color: #000;
+  text-align: center;
 }
 
-.weather-forecast-temperatures {
-  font-size: 13px;
+.weather-forecast-icon {
+  width: 60px;
 }
-
-.weather-forecast-temperatures-min {
-  opacity: 0.5;
-}
-.weather-forecast-temperatures {
-  display: flex;
-  color: rgb(151, 74, 223);
-text-align: center;
+.weather-forecast-temperature  {
+  display: inline-block;
+  width: 30px;
 }

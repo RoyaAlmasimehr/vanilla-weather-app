@@ -37,51 +37,38 @@
               </div>
             </div>
           </form>
-          <div class="overwiew">
-            <h1 id="city"></h1>
-            <ul>
-              <li id="date"></li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="clear" id="icon" class="float-left" />
-                <div class="float-left">
-                  <div class="sun">
-                    <strong id="temperature"></strong>
+          <main>
+<div class="weather-data">
+<h1 class="weather-city" id="city">tehran</h1>
+<div class="weather-time">
+<ul>
+    <li id="time"></li>
+    <li id="description"></li>
+</ul>
+</div>
+<div class="weather-temperature">
+     <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="clear" id="icon">
+            <div class="weather-app-temperature" id="temperature">18C</div>
+          
+</div>
 
-                    <span class="units"
-                      ><a href="#" id="celsius-link" class="active">°C</a> |
-                      <a href="#" id="fahrenheit-link">°F</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <ul>
-                <li id="humidity">Humidity:</li>
-                <li id="wind">Wind:2 km/h</li>
-              </ul>
-            </div>
-          </div>
-          <div class="weather-forecast-day" id="forecast">
-            
-          </div>
-        </div>
 
-        <small>
-          <a
-            href="https://github.com/RoyaAlmasimehr/vanilla-weather-app"
-            target="_blank"
-          >
-            Open-source code </a
-          >by Roya Almasimehr
-        </small>
+<div class="desc">
+    <ul>
+        <li id="humidity"></li>
+        <li id="wind"></li>
+    </ul>
+</div>
+
+
+
+
+</div>
+<div class="weather-forecast" id="forecast"></div>
+
+          </main>
       </div>
     </div>
-    <script src="src/script.js"></script>
+  <script src="src/script.js"></script>
   </body>
 </html>
